@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task/Screens/book_screen.dart';
-import 'package:task/Screens/lightbuld_screen.dart';
-import 'package:task/Screens/profile_screen.dart';
-import 'package:task/Screens/video_screen.dart';
-import 'Screens/home_screen.dart';
+
+import '../BottomNavScreens/book_screen.dart';
+import '../BottomNavScreens/home_screen.dart';
+import '../BottomNavScreens/lightbuld_screen.dart';
+import '../BottomNavScreens/profile_screen.dart';
+import '../BottomNavScreens/video_screen.dart';
+
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -55,7 +57,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book, size: 30),
+            icon: Icon(Icons.bookmark_outline_sharp, size: 30),
             label: "",
           ),
           BottomNavigationBarItem(

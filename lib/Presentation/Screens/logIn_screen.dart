@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task/Screens/home_screen.dart';
-import 'package:task/custom_button.dart';
-import 'package:task/custom_textfield.dart';
-import 'package:task/search_screen.dart';
-import 'package:task/sign_up_screen.dart';
-
-import 'bottom_nav_screen.dart';
+import 'package:task/Presentation/Screens/course_details.dart';
+import 'package:task/Presentation/Custom/custom_button.dart';
+import 'package:task/Presentation/Custom/custom_textfield.dart';
+import 'package:task/Presentation/Screens/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -89,7 +86,7 @@ class LoginScreen extends StatelessWidget {
 
                   SizedBox(height: 25),
                   CustomButton(text: "Log In", onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavBarScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CourseDetails()));
 
                   },),
                   SizedBox(height: 25),
@@ -113,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                         Text("New to Learnova? "),
                         InkWell(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
                           },
                           child: Text(
                             "Create an Account",

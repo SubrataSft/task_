@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task/custom_button.dart';
-import 'package:task/custom_textfield.dart';
-import 'package:task/logIn_screen.dart';
+import 'package:task/Presentation/Screens/course_details.dart';
+import 'package:task/Presentation/Custom/custom_button.dart';
+import 'package:task/Presentation/Custom/custom_textfield.dart';
+import 'package:task/Presentation/Screens/logIn_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});

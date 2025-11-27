@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task/custom_button.dart';
-import 'package:task/final_vocabulary_screen.dart';
+import 'package:task/Presentation/Custom/custom_button.dart';
+import 'package:task/Presentation/Screens/final_vocabulary_screen.dart';
 
 class FinalVocabularyScreen extends StatefulWidget {
   const FinalVocabularyScreen({super.key});
