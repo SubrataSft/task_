@@ -13,18 +13,22 @@ class SignInScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 241,
-              width: double.infinity,
-              decoration: BoxDecoration(
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+              child: Container(
+                height: 241,
+                width: double.infinity,
                 color: Colors.blue,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+                child: Image.asset(
+                  "assets/images/first_Image.png",
+                  fit: BoxFit.cover,
                 ),
               ),
-              child: Center(child: Image.asset("assets/images/learnova.png")),
-            ),
+            )
+            ,
 
             SizedBox(height: 25),
 

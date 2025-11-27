@@ -50,7 +50,8 @@ class PersonalizationContent extends StatefulWidget {
   const PersonalizationContent({super.key});
 
   @override
-  State<PersonalizationContent> createState() => _PersonalizationContentState();
+  State<PersonalizationContent> createState() =>
+      _PersonalizationContentState();
 }
 
 class _PersonalizationContentState extends State<PersonalizationContent> {
@@ -79,73 +80,75 @@ class _PersonalizationContentState extends State<PersonalizationContent> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Personalizing course\naccording to your profile',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
-        ),
-
-        const SizedBox(height: 40),
-
-        _buildProfileItem(
-          title: 'Current School',
-          value: 'Diocesan Boys\' School',
-        ),
-
-        const SizedBox(height: 24),
-
-        _buildProfileItem(
-          title: 'Elective Subject',
-          value: 'Mathematics',
-        ),
-
-        const SizedBox(height: 24),
-
-        _buildGradeDropdown(),
-
-        const SizedBox(height: 24),
-
-        _buildSourceDropdown(),
-        const Spacer(),
-
-        SizedBox(
-          width: double.infinity,
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            'Personalizing course\naccording to your profile',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.black87,
             ),
-            child: InkWell(
-              onTap: () {
+          ),
+
+          const SizedBox(height: 40),
+
+          _buildProfileItem(
+            title: 'Current School',
+            value: 'Diocesan Boys\' School',
+          ),
+
+          const SizedBox(height: 24),
+
+          _buildProfileItem(
+            title: 'Elective Subject',
+            value: 'Mathematics',
+          ),
+
+          const SizedBox(height: 24),
+
+          _buildGradeDropdown(),
+
+          const SizedBox(height: 24),
+
+          _buildSourceDropdown(),
+
+          const SizedBox(height: 30),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => BottomNavBarScreen()));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavBarScreen(),
+                  ),
+                );
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
               child: const Text(
                 'Get Started',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                style:
+                TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
+
   Widget _buildGradeDropdown() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,7 +163,6 @@ class _PersonalizationContentState extends State<PersonalizationContent> {
         ),
         const SizedBox(height: 8),
         Container(
-          width: double.infinity,
           height: 48,
           padding: const EdgeInsets.symmetric(horizontal: 12),
           decoration: BoxDecoration(
@@ -172,7 +174,8 @@ class _PersonalizationContentState extends State<PersonalizationContent> {
             child: DropdownButton<String>(
               value: selectedGrade,
               isExpanded: true,
-              icon: const Icon(Icons.arrow_drop_down, color: Colors.black54),
+              icon:
+              const Icon(Icons.arrow_drop_down, color: Colors.black54),
               alignment: Alignment.center,
               style: const TextStyle(
                 fontSize: 16,
@@ -211,7 +214,6 @@ class _PersonalizationContentState extends State<PersonalizationContent> {
         ),
         const SizedBox(height: 8),
         Container(
-          width: double.infinity,
           height: 48,
           padding: const EdgeInsets.symmetric(horizontal: 12),
           decoration: BoxDecoration(
@@ -223,7 +225,8 @@ class _PersonalizationContentState extends State<PersonalizationContent> {
             child: DropdownButton<String>(
               value: selectedSource,
               isExpanded: true,
-              icon: const Icon(Icons.arrow_drop_down, color: Colors.black54),
+              icon:
+              const Icon(Icons.arrow_drop_down, color: Colors.black54),
               alignment: Alignment.center,
               style: const TextStyle(
                 fontSize: 16,
